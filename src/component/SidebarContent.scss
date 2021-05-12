@@ -1,0 +1,19 @@
+@mixin d-flex($j-content, $algin-item) {
+  display: flex;
+  justify-content: $j-content;
+  align-items: $algin-item;
+}
+.sidebar-content {
+  @include d-flex(none, none);
+  width: 100%;
+  .wrap-content {
+    @include d-flex(center, center);
+    width: 85%;
+    .content {
+      padding: 2rem;
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

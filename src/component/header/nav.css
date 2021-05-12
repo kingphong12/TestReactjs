@@ -1,0 +1,45 @@
+.nav-menu-name {
+  height: 100%;
+  display: flex;
+}
+.nav_menu {
+  padding: 0.4rem;
+  background-color: aliceblue;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.nav_menu:hover + .nav_menu_item-sub {
+  display: block;
+}
+.nav-menu-text {
+  padding-left: 0.6rem;
+}
+.nav_menu_item-sub {
+  position: absolute;
+  top: 90%;
+  z-index: 5;
+  /* display: none; */
+  display: block;
+}
+.nav_menu_item-sub::after {
+  content: "";
+  position: absolute;
+  top: -9%;
+  width: 100%;
+  height: 6px;
+  background-color: red;
+  z-index: 16;
+}
+.nav_menu_item {
+  padding: 0.2rem;
+  list-style: none;
+  background-color: rgb(66, 39, 39);
+}
+.nav_menu_item-link {
+  padding: 0.2rem;
+  text-decoration: none;
+  color: #fff;
+}

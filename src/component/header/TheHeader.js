@@ -2,8 +2,10 @@ import React from 'react'
 import './TheHeader.scss'
 import Navs from './Navs'
 import { IconContext } from 'react-icons'
+import { Link } from 'react-router-dom'
 
 const TheHeader = () => {
+
   return (
     <>
       <IconContext.Provider value={{color: 'red'}}>
@@ -12,7 +14,9 @@ const TheHeader = () => {
             Logo
           </div>
 
-          <Navs />
+          <Link to="/quanlyvanban">Topics</Link>
+
+          {/* <Navs /> */}
         </div>
       </IconContext.Provider>
     </>

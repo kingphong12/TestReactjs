@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { SidebarData } from './SidebarData'
 import SubMenu from './SubMenu'
 import { IconContext} from 'react-icons'
+import { useRouteMatch } from 'react-router'
 
 const SidebarNav = styled.nav`
   padding-top: 10px;
@@ -11,14 +12,16 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  top: 0;
+  top: 200px;
   // transition: 350ms;
+  margin-top: 150px;
 `
 const SidebarWrap = styled.div`
   width: 100%;
 `
 
-const Sidebar = (match) => {
+const Sidebar = () => {
+  // const match = useRouteMatch();
   const [sidebar, setSidebar ] = useState(false)
 
   const showSidebar = () => setSidebar(!sidebar)
@@ -33,7 +36,7 @@ const Sidebar = (match) => {
           </NavIcon> */}
           {SidebarData.map((item, index) => {
             return(
-              <SubMenu item={item} key={index} match={match}/>
+              <SubMenu item={item} key={index}/>
             )
           })}
         </SidebarWrap>

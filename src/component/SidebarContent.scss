@@ -7,6 +7,7 @@
   @include d-flex(none, none);
   width: 100%;
   .wrap-content {
+    margin-top: 260px;
     @include d-flex(center, center);
     width: 85%;
     .content {

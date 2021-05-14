@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 
 const SidebarLink = styled(Link)`
@@ -41,13 +41,18 @@ const SidebarLink = styled(Link)`
     }
    `
 const SubMenu = ({item}) => {
+  const {url} = useRouteMatch();
   const [subnav, setSubnav] = useState(false)
 
   const showSubnav = () => setSubnav(!subnav)
 
   return (
     <>
-      <SidebarLink className="menu-link" to={item.path} onClick={item.subNav &&
+
+          <li>
+            <Link to={`${url}/products`}>truong xuan phong Products</Link>
+          </li>
+      {/* <SidebarLink className="menu-link" to={`${url}${item.path}`} onClick={item.subNav &&
         showSubnav}>
         <div >
           {item.icon}
@@ -69,7 +74,7 @@ const SubMenu = ({item}) => {
             <SidebarLabel>{item.title}</SidebarLabel>
           </DropdownLink>
         )
-      })}
+      })} */}
     </>
   )
 }

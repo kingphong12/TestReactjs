@@ -4,19 +4,19 @@ import TheContent from './TheContent'
 import './SidebarContent.scss'
 import {BrowserRouter as Router} from 'react-router-dom'
 
-const SideBarContent = (props) => {
-  const { match } = props
-  console.log(match)
+const SideBarContent = () => {
+
   return (
 
-    <Router>
+    <>
       <div className="sidebar-content">
         <Sidebar />
         <div className="wrap-content">
           <TheContent />
+          {/* xuaphong */}
         </div>
       </div>
-    </Router>
+    </>
   )
 }
 
